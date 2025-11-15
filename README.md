@@ -10,3 +10,5 @@ and output to a .htm file.
 I read English slow and the browser translation tool doesn't work on PDF file :3
 
 Ya that's about it
+
+Need [Pypdf](https://pypdf.readthedocs.io/en/stable/index.html) library tho, make sure to `pipintall` it
