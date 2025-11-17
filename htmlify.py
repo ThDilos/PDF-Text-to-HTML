@@ -58,7 +58,7 @@ else:
         filenames.pop()
         filename = '.'.join(filenames) + ".htm"
 
-        with open(filename, "w") as f:
+        with open(filename, "w", encoding = "utf-8") as f:
             wholePassage = ""
             newPassage = ""
             # Use the PdfReader from pypdf library to extract text
@@ -66,7 +66,7 @@ else:
                 reader = PdfReader(textFile)
                 for page in reader.pages:
                     wholePassage += page.extract_text()
-                newPassage = (header + transform(wholePassage) + foot)
+                newPassage = str((header + transform(wholePassage) + foot).encode(), 'utf-8')
             # Use traditional file reader
             else:
                 file = open(textFile, "+br")
